@@ -5,7 +5,7 @@ import Colors from "../../../shared/Strings/Colors";
 const Signup_profile_4Styles = StyleSheet.create({
     mainContainer:{
         height:'100%',
-        width:'100%',
+        width:'auto',
         backgroundColor:'white'
     },
     logContainer:{

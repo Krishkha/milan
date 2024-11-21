@@ -11,7 +11,7 @@ const data = [
     { label: 'Item 5', value: '5' },
 ];
 
-const DropdownComponent = ({placeholdername,dropdownWidth}) => {
+const DropdownComponent = ({placeholdername,dropdownWidth,data}) => {
     const [value, setValue] = useState(null);
     const [isFocus, setIsFocus] = useState(false);
 
