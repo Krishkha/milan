@@ -11,6 +11,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Colors from '../Strings/Colors';
 import Fontfamily from '../Strings/Font';
 import DropdownBtn from '../Strings/DropdownBtn';
+import Images from '../Strings/Image';
 
 export default function CustomDrawerContent(props) {
   const navigation = useNavigation();
@@ -26,7 +27,7 @@ export default function CustomDrawerContent(props) {
       </View>
 
       {/* User profile  */}
-      <CustomProfileHome /> 
+      <CustomProfileHome img={Images.premium_match_1} />
       {/* other Buttons */}
       <View style={styles.btnContainer}>
         <FlatList
@@ -34,7 +35,7 @@ export default function CustomDrawerContent(props) {
         data={DropdownBtn}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({item, index})=>
-          <TouchableOpacity style={styles.btn} key={index} onPress={() => navigation.navigate(item.screen) }>
+          <TouchableOpacity style={styles.btn} key={index} onPress={() => item.title == 'Logout' ? navigation.replace(item.screen) : navigation.navigate(item.screen) }>
           <View style={{flexDirection:'row',gap:10}}>
             <Image source={item.icon} style={{width:20,height:20,resizeMode:'contain'}} />
             <Text style={styles.btnText}>{item.title}</Text>
@@ -51,7 +52,7 @@ export default function CustomDrawerContent(props) {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    paddingHorizontal: 10,
+    paddingHorizontal: 0,
   },
   closeBtn: {
     flexDirection: 'row',
@@ -74,7 +75,6 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     backgroundColor: Colors.backgrcound1,
     width: '95%',
-    paddingHorizontal: 10,
     paddingVertical: 10,
     alignItems: 'center',
     justifyContent:'space-between',

@@ -6,6 +6,7 @@ import { useNavigation } from '@react-navigation/native'
 import CustomButton from '../../../shared/Components/CustomButton'
 import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
+import { ProfileImage } from '../../../shared/Components/CustomProfileHome'
 
 export default function Signup_profile_pick() {
     const navigation = useNavigation()
@@ -18,7 +19,7 @@ export default function Signup_profile_pick() {
 
                 <View style={Signup_profile_pickStyle.pickBox}>
                     <TouchableOpacity>
-                        <Image style={Signup_profile_pickStyle.profileImg} source={require('../../../assets/image/profile_img.png')} />
+                        <ProfileImage img={false} />
                     </TouchableOpacity>
                     <Text style={Signup_profile_pickStyle.profileImgHead}>Add Photos</Text>
                     <Text style={Signup_profile_pickStyle.profileImgHead}>to complete your Profile</Text>

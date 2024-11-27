@@ -8,7 +8,8 @@ const Home_Style = StyleSheet.create({
         backgroundColor:'#95D2FF33',
         paddingHorizontal:10,
         paddingVertical:5,
-        gap:5
+        gap:5,
+        alignItems:'center'
     },
     bluetickText:{
         color:'black',

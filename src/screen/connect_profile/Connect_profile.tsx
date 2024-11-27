@@ -33,50 +33,57 @@ export default function Connect_profile() {
             <ScrollView>
                 {/* Background image on the entire screen */}
                 <ImageBackground source={data.img} style={Contect_profile_Style.backgroundImg}>
-                    <StatusBar barStyle="light-content" translucent backgroundColor="transparent" />
+                    {/* Linear Gradient covering the entire screen */}
+                    <LinearGradient
+                        colors={['#00000000', '#000000']}
+                        style={Contect_profile_Style.gradient}
+                    >
+                        {/* StatusBar with translucent background */}
+                        <StatusBar barStyle="light-content" translucent backgroundColor="rgba(0, 0, 0, 0.5)" />
 
-                    {/* SafeAreaView to make sure content is inside the safe area */}
-                    <SafeAreaView style={{ flex: 1 }}>
-                        <View style={Contect_profile_Style.header}>
-                            {/* Back Button */}
-                            <TouchableOpacity style={Contect_profile_Style.backbtn} onPress={() => navigation.goBack()}>
-                                <AntDesign name="arrowleft" size={20} color="#FFFFFF" />
-                            </TouchableOpacity>
+                        {/* SafeAreaView to make sure content is inside the safe area */}
+                        <SafeAreaView style={{ flex: 1 }}>
+                            <View style={Contect_profile_Style.header}>
+                                {/* Back Button */}
+                                <TouchableOpacity style={Contect_profile_Style.backbtn} onPress={() => navigation.goBack()}>
+                                    <AntDesign name="arrowleft" size={20} color="#FFFFFF" />
+                                </TouchableOpacity>
 
-                            {/* Custom Premium Button */}
-                            <CustomPremiumBach />
-                        </View>
+                                {/* Custom Premium Button */}
+                                <CustomPremiumBach />
+                            </View>
 
-                        {/* Like and Share Buttons */}
-                        <View style={Contect_profile_Style.box1}>
-                            <TouchableOpacity style={Contect_profile_Style.likebtn} onPress={() => setIsLike(!islike)}>
-                                <AntDesign name="heart" size={20} color={islike ? 'red' : 'white'} />
-                            </TouchableOpacity>
-                            <TouchableOpacity style={Contect_profile_Style.likebtn}>
-                                <Entypo name="share" size={20} color="#00C6FD" />
-                            </TouchableOpacity>
-                        </View>
+                            {/* Like and Share Buttons */}
+                            <View style={Contect_profile_Style.box1}>
+                                <TouchableOpacity style={Contect_profile_Style.likebtn} onPress={() => setIsLike(!islike)}>
+                                    <AntDesign name="heart" size={20} color={islike ? 'red' : 'white'} />
+                                </TouchableOpacity>
+                                <TouchableOpacity style={Contect_profile_Style.likebtn}>
+                                    <Entypo name="share" size={20} color="#00C6FD" />
+                                </TouchableOpacity>
+                            </View>
 
-                        {/* Profile Information */}
-                        <View style={Contect_profile_Style.box2}>
-                            <View style={Contect_profile_Style.profileInfoBox}>
-                                <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
-                                    <Image source={require('../../assets/icons/blue_tick.png')} style={{ width: 20, height: 20 }} />
-                                    <Text style={Contect_profile_Style.name}>{data.name}</Text>
-                                </View>
-                                <View style={Contect_profile_Style.line}>
-                                    <Text style={Contect_profile_Style.text}>{data.age} yrs, {data.height}, {data.state}</Text>
-                                    <Entypo name="dot-single" size={15} color="#FFFFFF" />
-                                    <Text style={Contect_profile_Style.text}>{data.job}</Text>
-                                </View>
-                                <View style={Contect_profile_Style.line}>
-                                    <Text style={Contect_profile_Style.text}>{data.cast}, {data.address} </Text>
-                                    <Entypo name="dot-single" size={15} color="#FFFFFF" />
-                                    <Text style={Contect_profile_Style.text}>India</Text>
+                            {/* Profile Information */}
+                            <View style={Contect_profile_Style.box2}>
+                                <View style={Contect_profile_Style.profileInfoBox}>
+                                    <View style={{ flexDirection: 'row', gap: 10, alignItems: 'center' }}>
+                                        <Image source={Icons.blueTickIcon2} style={Contect_profile_Style.bluetick} />
+                                        <Text style={Contect_profile_Style.name}>{data.name}</Text>
+                                    </View>
+                                    <View style={Contect_profile_Style.line}>
+                                        <Text style={Contect_profile_Style.text}>{data.age} yrs, {data.height}, {data.state}</Text>
+                                        <Entypo name="dot-single" size={15} color="#FFFFFF" />
+                                        <Text style={Contect_profile_Style.text}>{data.job}</Text>
+                                    </View>
+                                    <View style={Contect_profile_Style.line}>
+                                        <Text style={Contect_profile_Style.text}>{data.cast}, {data.address} </Text>
+                                        <Entypo name="dot-single" size={15} color="#FFFFFF" />
+                                        <Text style={Contect_profile_Style.text}>India</Text>
+                                    </View>
                                 </View>
                             </View>
-                        </View>
-                    </SafeAreaView>
+                        </SafeAreaView>
+                    </LinearGradient>
                 </ImageBackground>
 
                 {/* About Section */}
@@ -267,9 +274,9 @@ export default function Connect_profile() {
                     <View style={Contect_profile_Style.connactBox}>
                         <Text style={Contect_profile_Style.likeText}>Like this Profile?</Text>
                         <CustomLinearText text="Connect Me" />
-                        {/* <View style={styles.connectBtn}> */}
-                        <CustomRoundBtn name={<AntDesign name="check" size={20} />} btnpadding={15} width={49} />
-                        {/* </View> */}
+                        <View style={Contect_profile_Style.connectBtn}>
+                            <CustomRoundBtn name={<AntDesign name="check" size={20} />} btnpadding={15} width={49} />
+                        </View>
                     </View>
                 </View>
             </ScrollView>

@@ -4,10 +4,8 @@ import Fontfamily from "../../../shared/Strings/Font";
 
 const Loginstyle = StyleSheet.create({
     main_container: {
-        width: '100%',
-        flex: 1,
         alignItems: 'center',
-        backgroundColor: Colors.backgrcound1
+        backgroundColor: Colors.backgrcound1,
     },
     welcome_container: {
         width: '100%',
@@ -24,7 +22,6 @@ const Loginstyle = StyleSheet.create({
         fontFamily: Fontfamily.Urbanist400,
         color: Colors.text3,
         fontSize: 15,
-        fontWeight: '100'
     },
     google_btn: {
         color: Colors.text6,
@@ -112,7 +109,7 @@ const Loginstyle = StyleSheet.create({
         borderTopColor: Colors.bordercolor4,
         justifyContent: 'center',
         alignItems: 'center',
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     signupText: {
         // backgroundColor:'red',

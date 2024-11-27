@@ -7,29 +7,37 @@ import Feather from 'react-native-vector-icons/Feather';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import CustomButton from './CustomButton'
 import Colors from '../Strings/Colors'
+import Icons from '../Strings/Icons'
+import { useNavigation } from '@react-navigation/core'
 
-export default function CustomProfileHome() {
+export const ProfileImage = ({ img }) => {
+    return (
+        <View style={styles.profileImgBox} >
+            <View style={styles.imgBox}>
+                <Image source={img || Icons.noProfileUser} style={{ resizeMode: 'cover', width: '100%', height: '100%' }} />
+            </View>
+            <TouchableOpacity style={styles.plusebtn}>
+                <AntDesign name='pluscircleo' color='white' size={30} />
+            </TouchableOpacity>
+        </View >
+    )
+}
+export default function CustomProfileHome({ img }) {
+    const navigation = useNavigation()
     return (
         <View style={styles.container}>
             <TouchableOpacity>
                 {/* <Image source={Images.profileImg} /> */}
-                <View style={styles.profileImgBox}>
-                    <View style={styles.imgBox}>
-                        <Image source={require('../../assets/image/profie_1.png')} style={{resizeMode:'contain',width:'100%',height:'100%'}} />
-                    </View>
-                    <TouchableOpacity style={styles.plusebtn}>
-                        <AntDesign name='pluscircleo' color='white' size={30} />
-                    </TouchableOpacity>
-                </View>
+                <ProfileImage img={img} />
             </TouchableOpacity>
             <View>
                 <Text style={styles.profilename}>Ashu Ahmad</Text>
                 <TouchableOpacity style={styles.profileEditbtn}>
-                        <Feather name="edit" size={15} color="#1EB8FF" />
-                        <Text style={styles.editText}>Edit Profile</Text>
+                    <Feather name="edit" size={15} color="#1EB8FF" />
+                    <Text style={styles.editText}>Edit Profile</Text>
                 </TouchableOpacity>
                 <Text style={styles.normalText}> Account - Free</Text>
-                <CustomButton name='Upgrade Membership' width='78%' />
+                <CustomButton name='Upgrade Membership' width='77%' navigation={()=> navigation.navigate('Premium') } />
             </View>
         </View>
     )
@@ -44,35 +52,35 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         gap: 10
     },
-    profileImgBox:{
-        width:120,
-        height:120,
-        borderWidth:1,
-        borderColor:'white',
-        borderStyle:'dashed',
-        borderRadius:60,
-        padding:10,
-        justifyContent:'center',
-        alignItems:'center'
+    profileImgBox: {
+        width: 120,
+        height: 120,
+        borderWidth: 1,
+        borderColor: Colors.bordercolor4,
+        borderStyle: 'dashed',
+        borderRadius: 60,
+        padding: 10,
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    imgBox:{
-        backgroundColor:'white',
-        width:'100%',
-        height:'100%',
-        borderRadius:60,
-        justifyContent:'center',
-        alignItems:'center',
-        overflow:'hidden',
-        resizeMode:'cover'
+    imgBox: {
+        backgroundColor: 'white',
+        width: '100%',
+        height: '100%',
+        borderRadius: 60,
+        justifyContent: 'center',
+        alignItems: 'center',
+        overflow: 'hidden',
+        resizeMode: 'cover'
     },
     plusebtn: {
-        width:'auto',
-        height:'auto',
+        width: 'auto',
+        height: 'auto',
         backgroundColor: Colors.background3,
-        position:'absolute',
-        top:-10,
-        left:-15,
-        borderRadius:60
+        position: 'absolute',
+        top: -10,
+        left: -15,
+        borderRadius: 60
 
     },
     profilename: {
@@ -80,14 +88,14 @@ const styles = StyleSheet.create({
         fontSize: 20
     },
     profileEditbtn: {
-        flexDirection:'row',
-        gap:5
+        flexDirection: 'row',
+        gap: 5
     },
-    editText:{
+    editText: {
         color: '#1EB8FF',
         fontFamily: Fontfamily.Urbanist400
     },
-    normalText:{
+    normalText: {
         fontFamily: Fontfamily.Urbanist600
     }
 })

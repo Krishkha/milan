@@ -32,6 +32,8 @@ const Icons = {
     incomingCallIcon: require('../../assets/icons/phone-incoming.png'),
     outgingCallIcon: require('../../assets/icons/phone-outging.png'),
     missedCallIcon: require('../../assets/icons/missed-call.png'),
+    noProfileUser: require('../../assets/icons/user.png'),
+    blueTickIcon2: require('../../assets/icons/blue_tick-1.png'),
 }
 
 export default Icons;

@@ -20,7 +20,7 @@ const Signup = () => {
                 <CustomProgressBar progressbarWidth="40%" />
 
                 <ScrollView
-                    contentContainerStyle={StyleSheet.absoluteFill}
+                    contentContainerStyle={[StyleSheet.absoluteFill,{justifyContent:'center'}]}
                     showsVerticalScrollIndicator={false}
                 >
                     <View style={Signupstyle.midContainer}>
@@ -47,14 +47,14 @@ const Signup = () => {
                             </Text>
                         </View>
                     </View>
-                    <View style={Signupstyle.btn}>
-                        <CustomButton
-                            name="Continue"
-                            width="90%"
-                            navigation={() => navigation.navigate('profile_2')}
-                        />
-                    </View>
                 </ScrollView>
+                <View style={Signupstyle.btn}>
+                    <CustomButton
+                        name="Continue"
+                        width="90%"
+                        navigation={() => navigation.navigate('profile_2')}
+                    />
+                </View>
             </View>
         </>
     );

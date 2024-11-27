@@ -23,7 +23,7 @@ export default function CustomLinearText({text}) {
 const styles = StyleSheet.create({
     maskedView: {
         width: '37%',
-        height: 50,
+        height: 40,
         justifyContent: 'center',
         alignItems: 'center',
     },

@@ -5,16 +5,16 @@ import Colors from "../../../shared/Strings/Colors";
 const Signup_profile_2Styles = StyleSheet.create({
     mainContainer:{
         height:'100%',
-        width:'100%'
+        width:'auto',
+        justifyContent:'space-between',
+        paddingBottom:20
     },
     logContainer:{
         width:'100%',
         height:'auto',
         alignItems:'center',
         gap:5,
-        // backgroundColor:'red',
         paddingVertical:10,
-        marginTop:50
     },
     logoText:{
         fontFamily:Fontfamily.Urbanist400,
@@ -34,9 +34,7 @@ const Signup_profile_2Styles = StyleSheet.create({
     },
     btn:{
         width:'100%',
-        position:'absolute',
         marginHorizontal:'5%',
-        bottom:20
     }
 })
 

@@ -16,7 +16,7 @@ export default function CustomInput({inputname,inputborder}) {
 const styles = StyleSheet.create({
     input: {
         backgroundColor: 'white',
-        width: '90%',
+        width: '100%',
         paddingLeft: 10,
         borderBottomWidth: 1,
         borderBottomColor: '#E3E3E3',

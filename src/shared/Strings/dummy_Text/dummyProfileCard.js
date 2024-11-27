@@ -14,7 +14,7 @@ const profileInfo = [
                 id: 2,
                 name: 'Priya Singh',
                 img: require('../../../assets/image/profile_2.png'),
-                age: 120,
+                age: 25,
                 height: "4'8",
                 language: 'Bangali',
                 religion: 'Hindu',

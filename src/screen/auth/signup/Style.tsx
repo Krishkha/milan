@@ -6,13 +6,14 @@ const Signupstyle = StyleSheet.create({
     mainContainer: {
         width: '100%',
         height: '100%',
-        // justifyContent: 'space-between',
+        justifyContent: 'space-between',
+        paddingBottom:20
         // alignItems:'center'
     },
     midContainer: {
         height: 'auto',
         width: '100%',
-        marginTop:100,
+        // marginTop:100,
     },
     logoBox: {
         justifyContent: 'center',
@@ -49,8 +50,8 @@ const Signupstyle = StyleSheet.create({
     },
     btn:{
         width:'100%',
-        position:'absolute',
-        bottom:20,
+        // position:'absolute',
+        // bottom:20,
         marginHorizontal:'5%'
     }
 })

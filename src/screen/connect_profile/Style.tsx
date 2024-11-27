@@ -3,6 +3,9 @@ import Fontfamily from "../../shared/Strings/Font";
 import Colors from "../../shared/Strings/Colors";
 
 const Contect_profile_Style = StyleSheet.create({
+    gradient: {
+        flex: 1
+    },
     backgroundImg: {
         width: '100%',
         height: 430, // Adjust this based on how tall you want the image to be
@@ -21,7 +24,7 @@ const Contect_profile_Style = StyleSheet.create({
         borderRadius: 50,
         padding: 10
     },
-    
+
     box1: {
         width: '100%',
         alignItems: 'flex-end',
@@ -46,6 +49,10 @@ const Contect_profile_Style = StyleSheet.create({
     },
     profileInfoBox: {
         paddingLeft: 25,
+    },
+    bluetick: {
+        width: 20, 
+        height: 20,
     },
     name: {
         fontFamily: Fontfamily.Urbanist600,
@@ -165,57 +172,57 @@ const Contect_profile_Style = StyleSheet.create({
         alignItems: 'center',
         borderTopRightRadius: 12,
         borderTopLeftRadius: 12,
-        gap:20
+        gap: 20
     },
     text: {
         color: Colors.text2,
         fontSize: 18,
         fontFamily: Fontfamily.Urbanist500
     },
-    imgBox:{
-        width:'100%',
-        flexDirection:'row',
-        justifyContent:'center',
-        alignItems:'center'
+    imgBox: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
-    img1:{
-        width:100,
-        height:100,
-        resizeMode:'cover',
-        borderRadius:50,
-        overflow:'hidden'
+    img1: {
+        width: 100,
+        height: 100,
+        resizeMode: 'cover',
+        borderRadius: 50,
+        overflow: 'hidden'
     },
-    image:{
-        width:100,
-        height:100
+    image: {
+        width: 100,
+        height: 100
     },
-    swipIcon:{
-        position:'absolute',
-        bottom:60
+    swipIcon: {
+        position: 'absolute',
+        bottom: 60
     },
-    matchesDetail:{
-        paddingVertical:10,
-        paddingHorizontal:10
+    matchesDetail: {
+        paddingVertical: 10,
+        paddingHorizontal: 10
     },
-    matchesHeading:{
+    matchesHeading: {
         fontFamily: Fontfamily.Urbanist700,
         color: Colors.text1
     },
-    connactBox:{
-        width:'100%',
-        flexDirection:'row',
-        justifyContent:'center',
-        alignItems:"center",
+    connactBox: {
+        width: '100%',
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: "center",
         // backgroundColor:'red',
-        gap:10,
-        paddingHorizontal:36,
-        paddingVertical:20
+        gap: 10,
+        paddingHorizontal: 36,
+        paddingVertical: 20
     },
-    likeText:{
+    likeText: {
         fontFamily: Fontfamily.Urbanist400,
-        fontStyle:'italic',
+        fontStyle: 'italic',
         color: Colors.text1
-    }
+    },
 })
 
 export default Contect_profile_Style;

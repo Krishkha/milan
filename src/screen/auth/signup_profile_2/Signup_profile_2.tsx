@@ -11,7 +11,7 @@ import { Diet, Height, MaritalStatus } from '../../../shared/Strings/DropdownIte
 
 export default function Signup_profile_2() {
     const navigation = useNavigation();
-    
+
     return (
         <>
             <StatusBar barStyle="dark-content" backgroundColor="white" />
@@ -20,8 +20,8 @@ export default function Signup_profile_2() {
                 <View>
                     <CustomBackBtn backbtnfun={() => navigation.navigate('Signup')} />
                 </View>
-                
-                <ScrollView contentContainerStyle={StyleSheet.absoluteFillObject}>
+
+                <ScrollView contentContainerStyle={[StyleSheet.absoluteFillObject,{justifyContent:'center'}]}>
                     <View style={Signup_profile_2Styles.logContainer}>
                         <Image source={Icons.profileIcon} />
                         <Text style={Signup_profile_2Styles.logoText}>Now let’s build your Profile</Text>
@@ -29,17 +29,17 @@ export default function Signup_profile_2() {
                     <View style={Signup_profile_2Styles.dropdownContainer}>
                         <Text style={Signup_profile_2Styles.dropdownText}>Marital status</Text>
                         <DropdownComponent placeholdername="Your Marital status" data={MaritalStatus} />
-                        
+
                         <Text style={Signup_profile_2Styles.dropdownText}>Height</Text>
                         <DropdownComponent placeholdername="Your height" data={Height} />
-                        
+
                         <Text style={Signup_profile_2Styles.dropdownText}>Diet</Text>
                         <DropdownComponent placeholdername="Your Diet" data={Diet} />
                     </View>
-                    <View style={Signup_profile_2Styles.btn}>
-                        <CustomButton name="Continue" width="90%" navigation={() => navigation.navigate('profile_3')} />
-                    </View>
                 </ScrollView>
+                <View style={Signup_profile_2Styles.btn}>
+                    <CustomButton name="Continue" width="90%" navigation={() => navigation.navigate('profile_3')} />
+                </View>
             </View>
         </>
     );

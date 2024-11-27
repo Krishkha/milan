@@ -8,6 +8,7 @@ import CustomProfileHome from '../../shared/Components/CustomProfileHome';
 import CustomProfileCard from '../../shared/Components/CustomProfileCard';
 import profileInfo from '../../shared/Strings/dummy_Text/dummyProfileCard';
 import { ScrollView } from 'react-native-gesture-handler';
+import Images from '../../shared/Strings/Image';
 
 export default function Home() {
     return (
@@ -16,13 +17,13 @@ export default function Home() {
             <ScrollView>
                 <CustomHeader headename='Home' icon={true} />
                 <TouchableOpacity style={Home_Style.blueTickBox}>
-                    <Image source={Icons.blueTickIcon} />
+                    <Image source={Icons.blueTickIcon2} style={{width:15,height:15}} />
                     <Text style={Home_Style.bluetickText}>Standout with Verification. Get Blue Tick Now</Text>
                     <Entypo name="chevron-right" size={18} color="black" />
                 </TouchableOpacity>
 
                 {/* custom Profile Container */}
-                <CustomProfileHome />
+                <CustomProfileHome img={Images.premium_match_1} />
 
                 {/* Custom Profile */}
                 <CustomProfileCard profileinfothroughhome={profileInfo} />

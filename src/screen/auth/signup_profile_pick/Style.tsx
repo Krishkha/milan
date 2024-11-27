@@ -12,7 +12,7 @@ const Signup_profile_pickStyle = StyleSheet.create({
         width: '100%',
         height: 'auto',
         alignItems: 'center',
-        gap: 5,
+        gap: 10,
         marginTop: 150
     },
     profileImg: {
